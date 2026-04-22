@@ -125,7 +125,7 @@ const config: Config = {
         {
           title: '기타',
           items: [
-            {label: 'RSS', href: '/blog/rss.xml'},
+            {label: 'RSS', href: 'pathname:///blog/rss.xml'},
             {
               label: 'GitHub',
               href: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}`,
