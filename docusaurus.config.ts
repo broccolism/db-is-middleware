@@ -58,7 +58,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/tree/main/`,
+          editUrl: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/tree/master/`,
         },
         blog: {
           showReadingTime: true,
@@ -71,7 +71,7 @@ const config: Config = {
             description: '정처기 시험과 실무 사이의 간극을 기록합니다',
             xslt: true,
           },
-          editUrl: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/tree/main/`,
+          editUrl: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/tree/master/`,
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'ignore',
@@ -135,7 +135,7 @@ const config: Config = {
             },
             {
               label: '기여 가이드',
-              href: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/blob/main/CONTRIBUTING.md`,
+              href: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}/blob/master/CONTRIBUTING.md`,
             },
           ],
         },
