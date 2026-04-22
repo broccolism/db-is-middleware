@@ -1,0 +1,49 @@
+severity-wtf:
+  label: WTF
+  permalink: /severity-wtf
+  description: 완전히 잘못되었거나 오해를 유발하는 서술
+
+severity-outdated:
+  label: Outdated
+  permalink: /severity-outdated
+  description: 과거엔 맞았으나 현재는 맞지 않는 서술
+
+severity-nitpick:
+  label: Nitpick
+  permalink: /severity-nitpick
+  description: 사소하지만 정확도가 아쉬운 서술
+
+db:
+  label: DB
+  permalink: /tag-db
+  description: 데이터베이스 관련
+
+architecture:
+  label: Architecture
+  permalink: /tag-architecture
+  description: 시스템 아키텍처 관련
+
+network:
+  label: Network
+  permalink: /tag-network
+
+process:
+  label: Process
+  permalink: /tag-process
+  description: 개발 프로세스/방법론 관련
+
+security:
+  label: Security
+  permalink: /tag-security
+
+language:
+  label: Language
+  permalink: /tag-language
+
+era-90s:
+  label: 1990년대
+  permalink: /era-90s
+
+era-2000s:
+  label: 2000년대
+  permalink: /era-2000s
