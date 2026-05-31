@@ -1,13 +1,13 @@
 ---
 title: 요구사항 분석 용어가 낡아 보일 때
-description: "구조적 분석, DFD, DD, CASE, HIPO를 교재 문장 그대로 외우기 전에 이해하기"
+description: "구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML을 교재 문장 그대로 외우기 전에 이해하기"
 tags: [process, architecture, severity-nitpick, era-90s]
 sidebar_position: 2
 ---
 
 # 요구사항 분석 용어가 낡아 보일 때
 
-**한 줄로**: 구조적 분석, DFD, DD, CASE, HIPO는 요즘 실무 용어라기보다 전통적인 소프트웨어 공학 문맥의 분석/문서화 도구에 가깝다.
+**한 줄로**: 구조적 분석, DFD, DD, CASE, HIPO, TAGS는 요즘 실무 용어라기보다 전통적인 소프트웨어 공학 문맥의 분석/문서화 도구에 가깝다.
 
 이 글은 요구사항 분석 단원을 읽으면서 생긴 질문들을 모은 정리이다.
 
@@ -15,7 +15,7 @@ sidebar_position: 2
 
 ## 📌 3줄 요약
 
-- **시험에선**: 구조적 분석은 자료 흐름 중심, DFD는 버블 차트, DD는 자료 정의, CASE는 자동화 도구, HIPO는 계층적 IPO 도식화 기법으로 외운다.
+- **시험에선**: 구조적 분석은 자료 흐름 중심, DFD는 버블 차트, DD는 자료 정의, CASE는 자동화 도구, HIPO는 계층적 IPO 도식화 기법, UML은 OMT/Booch/OOSE 통합으로 외운다.
 - **이해할 땐**: "당연한 말"처럼 보이는 문장은 대부분 예전의 비정형 문서 작성 방식과 대비되는 표현이다.
 - **결론**: 이 단원은 현대 실무 용어라기보다 DFD, DD, HIPO 같은 고전적 분석 산출물을 구분하는 문제로 접근하는 편이 낫다.
 
@@ -247,6 +247,124 @@ HIPO는 보통 **Hierarchy Input Process Output**의 약자로 설명된다.
 
 ---
 
+## TAGS와 IORL은 뭘까?
+
+TAGS는 보통 **Technology for Automated Generation of Systems**의 약자로 설명된다. 한국어로는 시스템 자동 생성 기술 정도로 볼 수 있다.
+
+요구사항 분석용 CASE 도구 맥락에서 TAGS는 사용자의 요구사항을 입력받아 분석/설계 산출물 생성을 지원하는 도구로 다뤄진다. 이때 사용하는 언어가 **IORL**이다.
+
+IORL은 **Input Output Requirement Language**의 약자이다. 말 그대로 **입출력 요구사항 언어**이다.
+
+IORL은 요구사항을 다음처럼 본다.
+
+```text
+어떤 입력이 들어오고,
+어떤 처리 요구가 있으며,
+어떤 출력이 나와야 하는가?
+```
+
+예를 들어 온라인 주문 시스템은 이렇게 표현할 수 있다.
+
+```text
+INPUT   : 고객번호, 상품번호, 주문수량, 배송지
+PROCESS : 재고 확인 및 주문 접수
+OUTPUT  : 주문번호, 주문상태, 결제요청정보
+```
+
+로그인 기능이라면 다음처럼 볼 수 있다.
+
+```text
+INPUT   : 회원 아이디, 비밀번호
+PROCESS : 회원 인증
+OUTPUT  : 로그인 성공 여부, 사용자 권한
+```
+
+성적 처리 시스템이라면 다음처럼 볼 수 있다.
+
+```text
+INPUT   : 학번, 과목코드, 점수
+PROCESS : 총점과 평균 계산, 등급 산출
+OUTPUT  : 성적표
+```
+
+핵심은 구조적 분석, HIPO, IORL이 모두 전통적인 `입력 -> 처리 -> 출력` 관점과 가까운 냄새를 낸다는 점이다.
+
+---
+
+## HIPO의 어순은 왜 어색할까?
+
+HIPO는 네 단어를 같은 수준으로 길게 늘어놓은 말이라기보다, **H + IPO**로 끊어 이해하는 편이 좋다.
+
+```text
+HIPO = Hierarchy + Input/Process/Output
+```
+
+즉 의미는 다음에 가깝다.
+
+```text
+Hierarchy (Input - Process - Output)
+```
+
+시스템 기능을 계층 구조로 나누고, 각 기능을 IPO 관점으로 설명한다는 뜻이다.
+
+```text
+주문 시스템
+├─ 주문 접수
+│  ├─ Input: 주문 정보
+│  ├─ Process: 주문 유효성 검사
+│  └─ Output: 주문번호
+└─ 결제 처리
+   ├─ Input: 주문번호, 결제정보
+   ├─ Process: 결제 승인 요청
+   └─ Output: 결제 결과
+```
+
+시험용으로는 다음처럼 압축하면 된다.
+
+> HIPO = 계층도 + IPO 명세
+
+---
+
+## UML에서 Rumbaugh, Booch, Jacobson은 외워야 할까?
+
+교재 문장:
+
+> UML은 Rumbaugh(OMT), Booch, Jacobson 등의 객체지향 방법론의 장점을 통합하였다.
+
+시험용으로는 사람 이름을 아주 깊게 알 필요는 없다. 다만 **UML이 여러 객체지향 방법론을 통합해서 만들어졌다**는 맥락과 대표 이름 정도는 키워드로 알아두는 것이 좋다.
+
+가장 자주 묶이는 이름은 다음 셋이다.
+
+| 사람 | 관련 방법론 | 시험용 기억 |
+| --- | --- | --- |
+| Rumbaugh | OMT | 객체 모델링 기법 |
+| Booch | Booch Method | 객체지향 설계 방법론 |
+| Jacobson | OOSE | 유스케이스 중심 방법론 |
+
+여기서 **OMT**는 **Object Modeling Technique**의 약자이다. 한국어로는 객체 모델링 기법 정도로 보면 된다.
+
+Rumbaugh가 자주 나오는 이유는 구조적 분석 쪽의 DFD처럼, 객체지향 분석 쪽에서 OMT가 꽤 대표적인 방법론으로 다뤄졌기 때문이다. OMT는 시스템을 객체 관점으로 모델링하기 위해 다음 세 모델을 강조한다.
+
+| OMT 모델 | 관심사 |
+| --- | --- |
+| Object Model | 객체, 클래스, 속성, 관계 |
+| Dynamic Model | 상태 변화, 이벤트 |
+| Functional Model | 자료 흐름, 처리 |
+
+여기서 재미있는 점은 OMT에도 Functional Model이 있어 DFD 같은 자료 흐름 관점이 일부 들어온다는 것이다. 그래서 Rumbaugh는 객체지향 분석 단원에서도, 구조적 분석과 비교할 때도 자꾸 얼굴을 비춘다.
+
+사람 이름 암기 강도는 이렇게 잡으면 된다.
+
+```text
+필수: UML은 객체지향 방법론을 통합한 표준 모델링 언어
+권장: Rumbaugh = OMT, Booch = Booch, Jacobson = OOSE/Use Case
+깊은 암기 불필요: 각 인물의 생애나 세부 표기법 역사
+```
+
+한 줄로 정리하면, **UML은 Rumbaugh의 OMT, Booch 방법론, Jacobson의 OOSE 같은 객체지향 방법론을 통합한 표준 모델링 언어**이다.
+
+---
+
 ## 🎯 정처기 문제 풀 때 꿀팁
 
 **키워드 매칭 전략**:
@@ -256,10 +374,14 @@ HIPO는 보통 **Hierarchy Input Process Output**의 약자로 설명된다.
 - `=`, `+`, `{}`, `[]`, `()` -> 자료 사전 DD
 - `Computer Aided Software Engineering`, `자동화 도구` -> CASE
 - `Hierarchy Input Process Output`, `계층도`, `입력-처리-출력` -> HIPO
+- `Technology for Automated Generation of Systems`, `IORL` -> TAGS
+- `Input Output Requirement Language`, `입출력 요구사항 언어` -> IORL
+- `Rumbaugh`, `Booch`, `Jacobson`, `OMT`, `OOSE` -> UML의 객체지향 방법론 통합 배경
 
 **함정 주의**:
 
 - ERD는 객체지향 분석 기법의 대표 도구라기보다 데이터 중심 모델링 도구로 보는 것이 안전하다.
 - DD를 단순 용어 설명표로만 이해하면 부족하다. 시험에서는 DD 표기 기호를 함께 묻기 쉽다.
 - CASE는 요즘 실무에서 자주 쓰는 말은 아니지만, 전통적인 소프트웨어 공학 용어로 시험에 남아 있다.
-
+- HIPO는 `Hierarchy + IPO`로 끊어 이해하면 어순이 덜 이상하다.
+- 사람 이름은 세부 역사보다 `Rumbaugh = OMT`, `Booch`, `Jacobson = OOSE/Use Case` 연결만 우선 잡는다.
