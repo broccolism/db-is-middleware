@@ -20,14 +20,14 @@ type DisciplineRow = {
 const archiveItems: ArchiveItem[] = [
   {
     eyebrow: '1과목 · 소프트웨어 설계',
-    title: '요구사항 분석 용어가 낡아 보일 때',
+    title: '요구사항 분석 용어 디버깅',
     description:
       '구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML을 교재 문장 그대로 외우기 전에 한번 분해합니다.',
     href: '/docs/software-design/requirements-analysis',
   },
   {
     eyebrow: '1과목 · UI 설계',
-    title: '사용자 인터페이스 문장이 뭉개져 보일 때',
+    title: '사용자 인터페이스 용어 디버깅',
     description:
       'UI의 세 가지 분야와 “사용자 인터페이스 개발 시스템”이라는 애매한 표현을 시험용/이해용으로 나눕니다.',
     href: '/docs/software-design/user-interface',

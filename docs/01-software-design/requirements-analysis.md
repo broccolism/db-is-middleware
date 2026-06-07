@@ -1,11 +1,11 @@
 ---
-title: 요구사항 분석 용어가 낡아 보일 때
+title: 요구사항 분석 용어 디버깅
 description: "구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML을 교재 문장 그대로 외우기 전에 이해하기"
 tags: [process, architecture, severity-nitpick, era-90s]
 sidebar_position: 2
 ---
 
-# 요구사항 분석 용어가 낡아 보일 때
+# 요구사항 분석 용어 디버깅
 
 **한 줄로**: 구조적 분석, DFD, DD, CASE, HIPO, TAGS는 요즘 실무 용어라기보다 전통적인 소프트웨어 공학 문맥의 분석/문서화 도구에 가깝다.
 
