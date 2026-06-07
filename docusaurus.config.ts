@@ -8,7 +8,7 @@ const PROJECT_NAME = 'db-is-middleware';
 const config: Config = {
   title: 'DB is Middleware',
   tagline: '"DB는 미들웨어이다" — 정처기 교재가 진심으로 주장한 바로 그 문장에서 시작합니다',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
