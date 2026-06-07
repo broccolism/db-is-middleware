@@ -22,7 +22,7 @@ const archiveItems: ArchiveItem[] = [
     eyebrow: '1과목 · 소프트웨어 설계',
     title: '요구사항 분석 용어 디버깅',
     description:
-      '구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML, ISO/IEC 9126을 교재 문장 그대로 외우기 전에 한번 분해합니다.',
+      '구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML, ISO/IEC 9126/25010을 교재 문장 그대로 외우기 전에 한번 분해합니다.',
     href: '/docs/software-design/requirements-analysis',
   },
   {
