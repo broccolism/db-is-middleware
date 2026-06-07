@@ -2,7 +2,7 @@
 title: 사용자 인터페이스 용어 디버깅
 description: "UI의 세 가지 분야와 '사용자 인터페이스 개발 시스템'이라는 애매한 표현 정리"
 tags: [process, architecture, severity-nitpick]
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # 사용자 인터페이스 용어 디버깅

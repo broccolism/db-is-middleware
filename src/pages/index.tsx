@@ -22,8 +22,15 @@ const archiveItems: ArchiveItem[] = [
     eyebrow: '1과목 · 소프트웨어 설계',
     title: '요구사항 분석 용어 디버깅',
     description:
-      '구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML, ISO/IEC 9126/25010을 교재 문장 그대로 외우기 전에 한번 분해합니다.',
+      '구조적 분석, DFD, DD, CASE, HIPO, TAGS, UML을 교재 문장 그대로 외우기 전에 한번 분해합니다.',
     href: '/docs/software-design/requirements-analysis',
+  },
+  {
+    eyebrow: '1과목 · 품질 요구사항',
+    title: '품질 요구사항 용어 디버깅',
+    description:
+      'ISO/IEC 9126과 25010의 품질 특성, 준수성, 안정성, 상호 운용성을 따로 정리합니다.',
+    href: '/docs/software-design/quality-requirements',
   },
   {
     eyebrow: '1과목 · UI 설계',
