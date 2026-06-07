@@ -33,6 +33,13 @@ const archiveItems: ArchiveItem[] = [
     href: '/docs/software-design/user-interface',
   },
   {
+    eyebrow: '이미지 저장소 · UML',
+    title: 'UML 다이어그램 예제 모음',
+    description:
+      '순차, 클래스, 유스케이스 다이어그램을 같은 온라인 쇼핑몰 예제로 나란히 비교합니다.',
+    href: '/docs/image-repository/uml-diagram-examples',
+  },
+  {
     eyebrow: '미들웨어 · 1990s fossil',
     title: 'DB는 미들웨어다?',
     description:
@@ -77,7 +84,7 @@ export default function Home(): ReactNode {
       <main className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.kicker}>정보처리기사 × 현직 개발자 팩트체크</p>
+            <p className={styles.kicker}>정보처리기사 × 질문형 학습 아카이브</p>
             <h1>DB is Middleware</h1>
             <p className={styles.lead}>
               정처기 교재를 읽다가 “이게 진짜 맞나?” 싶은 문장을 모읍니다.
@@ -88,15 +95,15 @@ export default function Home(): ReactNode {
               <Link className={styles.primaryAction} to="/docs/intro">
                 과목별 아카이브 보기
               </Link>
-              <Link className={styles.secondaryAction} to="/blog">
-                팩트체크 연재 읽기
+              <Link className={styles.secondaryAction} to="/docs/image-repository/uml-diagram-examples">
+                이미지 저장소 보기
               </Link>
             </div>
           </div>
           <aside className={styles.evidencePanel} aria-label="아카이브 현재 상태">
             <p className={styles.panelLabel}>현재 수집 중</p>
             <strong>1과목 소프트웨어 설계</strong>
-            <span>요구사항 분석 · UML · 사용자 인터페이스</span>
+            <span>요구사항 분석 · UML · UI · 이미지 예제</span>
             <div className={styles.rule} />
             <p>
               목표는 교재를 비웃는 것이 아니라, 시험용 암기와 실무용 이해를

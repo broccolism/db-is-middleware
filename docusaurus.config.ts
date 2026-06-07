@@ -106,8 +106,11 @@ const config: Config = {
           position: 'left',
           label: '과목별 아카이브',
         },
-        {to: '/blog', label: '팩트체크 연재', position: 'left'},
-        {to: '/blog/tags', label: '태그', position: 'left'},
+        {
+          to: '/docs/image-repository/uml-diagram-examples',
+          label: '이미지 저장소',
+          position: 'left',
+        },
         {
           href: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}`,
           label: 'GitHub',
@@ -122,8 +125,10 @@ const config: Config = {
           title: '둘러보기',
           items: [
             {label: '과목별 아카이브', to: '/docs/intro'},
-            {label: '팩트체크 연재', to: '/blog'},
-            {label: '태그', to: '/blog/tags'},
+            {
+              label: '이미지 저장소',
+              to: '/docs/image-repository/uml-diagram-examples',
+            },
           ],
         },
         {
@@ -142,7 +147,6 @@ const config: Config = {
         {
           title: '기타',
           items: [
-            {label: 'RSS', href: 'pathname:///blog/rss.xml'},
             {
               label: 'GitHub',
               href: `https://github.com/${GITHUB_USER}/${PROJECT_NAME}`,

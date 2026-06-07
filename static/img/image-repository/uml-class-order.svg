@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <marker id="triangle" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 12 6 L 0 12 z" fill="#fffaf0" stroke="#111827" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
+    </marker>
+    <style>
+      .title { font: 800 34px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
+      .subtitle { font: 600 18px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
+      .className { font: 800 20px Menlo, Apple SD Gothic Neo, sans-serif; fill: #111827; }
+      .member { font: 600 15px Menlo, Apple SD Gothic Neo, sans-serif; fill: #111827; }
+      .relation { font: 700 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
+      .note { font: 600 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #f9fafb; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="#fffaf0"/>
+  <text x="70" y="70" class="title">클래스 다이어그램 예시: 주문 도메인</text>
+  <text x="70" y="104" class="subtitle">클래스의 속성/메서드와 연관, 합성, 의존, 실체화 관계를 함께 보여준다.</text>
+
+  <g id="classes">
+    <g transform="translate(80 160)">
+      <rect width="250" height="174" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="250" height="42" fill="#dbeafe" stroke="#111827" stroke-width="3"/>
+      <text x="125" y="28" text-anchor="middle" class="className">Customer</text>
+      <line x1="0" y1="98" x2="250" y2="98" stroke="#111827" stroke-width="2"/>
+      <text x="14" y="68" class="member">+ id: Long</text>
+      <text x="14" y="90" class="member">+ name: String</text>
+      <text x="14" y="128" class="member">+ placeOrder()</text>
+    </g>
+    <g transform="translate(470 160)">
+      <rect width="260" height="194" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="260" height="42" fill="#dbeafe" stroke="#111827" stroke-width="3"/>
+      <text x="130" y="28" text-anchor="middle" class="className">Order</text>
+      <line x1="0" y1="118" x2="260" y2="118" stroke="#111827" stroke-width="2"/>
+      <text x="14" y="68" class="member">+ orderNo: String</text>
+      <text x="14" y="90" class="member">+ status: OrderStatus</text>
+      <text x="14" y="112" class="member">+ totalPrice: Money</text>
+      <text x="14" y="148" class="member">+ cancel()</text>
+      <text x="14" y="170" class="member">+ calculateTotal()</text>
+    </g>
+    <g transform="translate(880 160)">
+      <rect width="250" height="174" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="250" height="42" fill="#dbeafe" stroke="#111827" stroke-width="3"/>
+      <text x="125" y="28" text-anchor="middle" class="className">Product</text>
+      <line x1="0" y1="98" x2="250" y2="98" stroke="#111827" stroke-width="2"/>
+      <text x="14" y="68" class="member">+ id: Long</text>
+      <text x="14" y="90" class="member">+ price: Money</text>
+      <text x="14" y="128" class="member">+ changePrice()</text>
+    </g>
+    <g transform="translate(470 520)">
+      <rect width="260" height="150" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="260" height="42" fill="#dbeafe" stroke="#111827" stroke-width="3"/>
+      <text x="130" y="28" text-anchor="middle" class="className">OrderItem</text>
+      <line x1="0" y1="96" x2="260" y2="96" stroke="#111827" stroke-width="2"/>
+      <text x="14" y="68" class="member">+ quantity: int</text>
+      <text x="14" y="90" class="member">+ orderPrice: Money</text>
+      <text x="14" y="126" class="member">+ subtotal()</text>
+    </g>
+    <g transform="translate(900 520)">
+      <rect width="290" height="116" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="290" height="42" fill="#fef3c7" stroke="#111827" stroke-width="3"/>
+      <text x="145" y="26" text-anchor="middle" class="className">&lt;&lt;interface&gt;&gt;</text>
+      <text x="145" y="67" text-anchor="middle" class="className">PaymentService</text>
+      <text x="16" y="96" class="member">+ pay(order: Order)</text>
+    </g>
+    <g transform="translate(920 735)">
+      <rect width="250" height="84" fill="#ffffff" stroke="#111827" stroke-width="3"/>
+      <rect width="250" height="42" fill="#dbeafe" stroke="#111827" stroke-width="3"/>
+      <text x="125" y="28" text-anchor="middle" class="className">KakaoPayment</text>
+      <text x="16" y="66" class="member">+ pay(order: Order)</text>
+    </g>
+  </g>
+
+  <line x1="330" y1="245" x2="470" y2="245" stroke="#111827" stroke-width="3"/>
+  <text x="365" y="232" class="relation">1</text>
+  <text x="435" y="232" class="relation">0..*</text>
+  <text x="382" y="270" class="relation">연관</text>
+
+  <line x1="600" y1="354" x2="600" y2="520" stroke="#111827" stroke-width="3"/>
+  <polygon points="600,354 586,376 600,398 614,376" fill="#111827"/>
+  <text x="616" y="438" class="relation">합성</text>
+  <text x="618" y="384" class="relation">1</text>
+  <text x="618" y="506" class="relation">1..*</text>
+
+  <line x1="730" y1="595" x2="880" y2="247" stroke="#111827" stroke-width="3"/>
+  <text x="810" y="408" class="relation">연관</text>
+  <text x="755" y="578" class="relation">1</text>
+  <text x="852" y="267" class="relation">1</text>
+
+  <line x1="730" y1="250" x2="900" y2="565" stroke="#111827" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+  <text x="790" y="372" class="relation">의존</text>
+
+  <line x1="1045" y1="735" x2="1045" y2="636" stroke="#111827" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#triangle)"/>
+  <text x="1062" y="690" class="relation">실체화</text>
+
+  <rect x="70" y="838" width="1260" height="42" fill="#111827"/>
+  <text x="94" y="865" class="note">포인트: 클래스 다이어그램은 “정적인 구조”를 보여준다. 흐름보다 관계의 의미와 다중성을 먼저 본다.</text>
+</svg>
