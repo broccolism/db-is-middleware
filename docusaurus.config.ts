@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const GITHUB_USER = process.env.GH_USER ?? 'CHANGE_ME_GITHUB_USERNAME';
+const GITHUB_USER = process.env.GH_USER ?? 'broccolism';
 const PROJECT_NAME = 'db-is-middleware';
 
 const config: Config = {

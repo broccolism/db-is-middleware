@@ -9,7 +9,7 @@
 
 서술을 **현직 개발자 관점으로 팩트체크**하는 오픈 아카이브입니다.
 
-사이트: <https://CHANGE_ME_GITHUB_USERNAME.github.io/db-is-middleware/>
+사이트: <https://broccolism.github.io/db-is-middleware/>
 
 ## 글 구조
 

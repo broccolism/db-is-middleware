@@ -1,23 +1,263 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+.page {
+  background:
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    #f5f2ea;
+  background-size: 34px 34px;
+  color: #111827;
+  min-height: 100vh;
+}
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.55fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  margin: 0 auto;
+  max-width: 1180px;
+  min-height: 620px;
+  padding: clamp(4rem, 10vw, 7rem) 1.5rem 4rem;
+}
+
+.heroCopy {
+  align-self: center;
+}
+
+.kicker {
+  color: #9f1239;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  color: #111827;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.9;
+  margin: 0;
+  max-width: 780px;
+}
+
+.lead {
+  color: #374151;
+  font-size: clamp(1.12rem, 2vw, 1.35rem);
+  line-height: 1.72;
+  margin: 2rem 0 0;
+  max-width: 720px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  border: 2px solid #111827;
+  border-radius: 0;
+  display: inline-flex;
+  font-weight: 850;
+  line-height: 1;
+  padding: 0.95rem 1.15rem;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.primaryAction {
+  background: #111827;
+  color: #fff;
+}
+
+.secondaryAction {
+  background: transparent;
+  color: #111827;
+}
+
+.primaryAction:hover,
+.secondaryAction:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.secondaryAction:hover {
+  background: #9f1239;
+  border-color: #9f1239;
+}
+
+.evidencePanel {
+  align-self: center;
+  background: #111827;
+  border: 3px solid #111827;
+  box-shadow: 14px 14px 0 #9f1239;
+  color: #f9fafb;
+  padding: 1.5rem;
   position: relative;
-  overflow: hidden;
+}
+
+.evidencePanel::before {
+  background: repeating-linear-gradient(
+    90deg,
+    #fde68a 0,
+    #fde68a 14px,
+    #111827 14px,
+    #111827 28px
+  );
+  content: '';
+  height: 14px;
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -17px;
+}
+
+.panelLabel {
+  color: #fde68a;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+}
+
+.evidencePanel strong {
+  display: block;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+.evidencePanel span {
+  color: #d1d5db;
+  display: block;
+  font-weight: 750;
+  margin-top: 0.85rem;
+}
+
+.evidencePanel p:last-child {
+  color: #e5e7eb;
+  line-height: 1.7;
+  margin: 1.2rem 0 0;
+}
+
+.rule {
+  background: #fde68a;
+  height: 3px;
+  margin: 1.35rem 0;
+  width: 100%;
+}
+
+.section {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 3rem 1.5rem;
+}
+
+.sectionHeading {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.sectionHeading h2 {
+  color: #111827;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+}
+
+.archiveGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.archiveCard {
+  background: rgba(255, 255, 255, 0.74);
+  border: 2px solid #111827;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.archiveCard:hover {
+  box-shadow: 9px 9px 0 #111827;
+  color: #111827;
+  transform: translate(-3px, -3px);
+}
+
+.archiveCard span {
+  color: #9f1239;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.archiveCard strong {
+  display: block;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin-top: 0.85rem;
+}
+
+.archiveCard p {
+  color: #374151;
+  line-height: 1.65;
+  margin: auto 0 0;
+}
+
+.subjectList {
+  border-top: 2px solid #111827;
+}
+
+.subjectRow {
+  align-items: center;
+  border-bottom: 2px solid #111827;
+  color: #111827;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 0.8fr 1fr;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+
+.subjectRow:hover {
+  color: #9f1239;
+}
+
+.subjectRow span {
+  font-weight: 900;
+}
+
+.subjectRow strong {
+  font-weight: 650;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
   }
-}
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .archiveGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .subjectRow {
+    grid-template-columns: 1fr;
+  }
 }
