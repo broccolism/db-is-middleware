@@ -40,6 +40,13 @@ const archiveItems: ArchiveItem[] = [
     href: '/docs/software-design/user-interface',
   },
   {
+    eyebrow: '1과목 · 소프트웨어 아키텍처',
+    title: '소프트웨어 아키텍처 용어 디버깅',
+    description:
+      '모듈화로 인터페이스가 단순해진다는 말과 추상화/구체화의 관계를 분리해서 봅니다.',
+    href: '/docs/software-design/software-architecture',
+  },
+  {
     eyebrow: '이미지 저장소 · UML',
     title: 'UML 다이어그램 예제 모음',
     description:
@@ -58,7 +65,7 @@ const archiveItems: ArchiveItem[] = [
 const disciplineRows: DisciplineRow[] = [
   {
     label: '1과목. 소프트웨어 설계',
-    state: '요구사항 분석, UML, 품질 요구사항, UI 설계 정리 중',
+    state: '요구사항 분석, 품질 요구사항, UI 설계, 아키텍처 정리 중',
     href: '/docs/category/1과목-소프트웨어-설계',
   },
   {
