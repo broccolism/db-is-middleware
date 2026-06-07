@@ -56,7 +56,7 @@ sidebar_position: 1
 
 유스케이스 다이어그램은 액터가 시스템으로 무엇을 할 수 있는지 보여준다.
 
-![온라인 쇼핑몰 유스케이스 다이어그램](/img/image-repository/uml-usecase-shopping.svg)
+<img src="/db-is-middleware/img/image-repository/uml-usecase-shopping.svg" alt="온라인 쇼핑몰 유스케이스 다이어그램" loading="eager" />
 
 이 그림에서 볼 것:
 
