@@ -43,7 +43,7 @@ const archiveItems: ArchiveItem[] = [
     eyebrow: '1과목 · 소프트웨어 아키텍처',
     title: '소프트웨어 아키텍처 용어 디버깅',
     description:
-      '모듈화로 인터페이스가 단순해진다는 말과 추상화/구체화의 관계를 분리해서 봅니다.',
+      '모듈화, 추상화, 아키텍처 품질 속성의 세 측면을 분리해서 봅니다.',
     href: '/docs/software-design/software-architecture',
   },
   {
