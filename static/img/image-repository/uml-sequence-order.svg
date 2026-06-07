@@ -8,7 +8,7 @@
       .subtitle { font: 600 18px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
       .label { font: 800 20px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
       .small { font: 700 17px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
-      .note { font: 600 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
+      .note { font: 600 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #f9fafb; }
     </style>
   </defs>
   <rect width="1400" height="860" fill="#fffaf0"/>
