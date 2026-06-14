@@ -3,6 +3,9 @@
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
     </marker>
+        <marker id="umlGeneralization" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+          <path d="M 1 1 L 11 6 L 1 11 z" fill="#fffaf0" stroke="#111827" stroke-width="1.5"/>
+        </marker>
     <style>
       .title { font: 800 30px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
       .subtitle { font: 600 16px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
@@ -16,6 +19,8 @@
       .mutedText { font: 700 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
       .arrow { stroke: #111827; stroke-width: 2.6; fill: none; }
       .dashed { stroke: #6b7280; stroke-width: 2.4; stroke-dasharray: 9 7; fill: none; }
+      .inheritance { stroke: #111827; stroke-width: 2.4; fill: none; }
+      .realization { stroke: #6b7280; stroke-width: 2.4; stroke-dasharray: 9 7; fill: none; }
       .arrowLabel { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
       .noteBox { fill: #111827; stroke: #111827; stroke-width: 2; }
       .noteText { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #f9fafb; }
@@ -28,8 +33,8 @@
 <text x="224" y="199" text-anchor="middle" class="arrowLabel">빌더 전달</text>
 <line x1="440" y1="194" x2="500" y2="184" class="arrow" marker-end="url(#arrow)"/>
 <text x="470" y="179" text-anchor="middle" class="arrowLabel">단계 호출</text>
-<line x1="710" y1="174" x2="775" y2="144" class="dashed" marker-end="url(#arrow)"/>
-<line x1="710" y1="204" x2="775" y2="264" class="dashed" marker-end="url(#arrow)"/>
+<line x1="775" y1="144" x2="710" y2="174" class="realization" marker-end="url(#umlGeneralization)"/>
+<line x1="775" y1="264" x2="710" y2="204" class="realization" marker-end="url(#umlGeneralization)"/>
 <line x1="965" y1="144" x2="995" y2="144" class="arrow" marker-end="url(#arrow)"/>
 <text x="980" y="134" text-anchor="middle" class="arrowLabel">결과</text>
 <line x1="965" y1="264" x2="995" y2="264" class="arrow" marker-end="url(#arrow)"/>
