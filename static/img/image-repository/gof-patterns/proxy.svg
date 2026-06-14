@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-label="프록시 패턴">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
+    </marker>
+    <style>
+      .title { font: 800 30px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
+      .subtitle { font: 600 16px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
+      .box { fill: #eef2ff; stroke: #1f2937; stroke-width: 2.5; }
+      .actor { fill: #f8fafc; stroke: #111827; stroke-width: 2.5; }
+      .abstract { fill: #dbeafe; stroke: #1d4ed8; stroke-width: 2.5; }
+      .concrete { fill: #ecfdf5; stroke: #047857; stroke-width: 2.5; }
+      .product { fill: #fef3c7; stroke: #b45309; stroke-width: 2.5; }
+      .warning { fill: #fee2e2; stroke: #b91c1c; stroke-width: 2.5; }
+      .boxText { font: 800 16px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
+      .mutedText { font: 700 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
+      .arrow { stroke: #111827; stroke-width: 2.6; fill: none; }
+      .dashed { stroke: #6b7280; stroke-width: 2.4; stroke-dasharray: 9 7; fill: none; }
+      .arrowLabel { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
+      .noteBox { fill: #111827; stroke: #111827; stroke-width: 2; }
+      .noteText { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #f9fafb; }
+    </style>
+  </defs>
+  <rect width="1180" height="520" fill="#fffaf0"/>
+  <text x="54" y="58" class="title">프록시 패턴</text>
+  <text x="54" y="88" class="subtitle">Proxy는 RealSubject와 같은 인터페이스를 제공하고 접근을 대신 감당한다</text>
+  <line x1="230" y1="229" x2="315" y2="184" class="arrow" marker-end="url(#arrow)"/>
+<text x="272" y="196" text-anchor="middle" class="arrowLabel">Subject로 사용</text>
+<line x1="525" y1="184" x2="610" y2="184" class="dashed" marker-end="url(#arrow)"/>
+<text x="567" y="174" text-anchor="middle" class="arrowLabel">implements</text>
+<line x1="820" y1="184" x2="910" y2="184" class="arrow" marker-end="url(#arrow)"/>
+<text x="865" y="174" text-anchor="middle" class="arrowLabel">대신 접근</text>
+  <rect x="70" y="190" width="160" height="78" rx="8" class="actor"/>
+<text x="150" y="223" text-anchor="middle" class="boxText">Client</text>
+<rect x="315" y="145" width="210" height="78" rx="8" class="abstract"/>
+<text x="420" y="178" text-anchor="middle" class="boxText">Subject</text>
+<text x="420" y="198" text-anchor="middle" class="boxText">request()</text>
+<rect x="610" y="145" width="210" height="78" rx="8" class="concrete"/>
+<text x="715" y="178" text-anchor="middle" class="boxText">Proxy</text>
+<text x="715" y="198" text-anchor="middle" class="boxText">권한/캐시/네트워크</text>
+<rect x="910" y="145" width="210" height="78" rx="8" class="product"/>
+<text x="1015" y="178" text-anchor="middle" class="boxText">RealSubject</text>
+<text x="1015" y="198" text-anchor="middle" class="boxText">실제 객체</text>
+  <rect x="70" y="390" width="470" height="54" rx="6" class="noteBox"/>
+<text x="88" y="414" text-anchor="start" class="noteText">포인트: 불가능을 가능하게 하는 마법이 아니라</text>
+<text x="88" y="434" text-anchor="start" class="noteText">복잡함/비용/위험을 대리 객체가 감당한다.</text>
+</svg>

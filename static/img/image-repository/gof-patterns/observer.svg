@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="520" viewBox="0 0 1180 520" role="img" aria-label="옵저버 패턴">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
+    </marker>
+    <style>
+      .title { font: 800 30px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
+      .subtitle { font: 600 16px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #4b5563; }
+      .box { fill: #eef2ff; stroke: #1f2937; stroke-width: 2.5; }
+      .actor { fill: #f8fafc; stroke: #111827; stroke-width: 2.5; }
+      .abstract { fill: #dbeafe; stroke: #1d4ed8; stroke-width: 2.5; }
+      .concrete { fill: #ecfdf5; stroke: #047857; stroke-width: 2.5; }
+      .product { fill: #fef3c7; stroke: #b45309; stroke-width: 2.5; }
+      .warning { fill: #fee2e2; stroke: #b91c1c; stroke-width: 2.5; }
+      .boxText { font: 800 16px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #111827; }
+      .mutedText { font: 700 15px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
+      .arrow { stroke: #111827; stroke-width: 2.6; fill: none; }
+      .dashed { stroke: #6b7280; stroke-width: 2.4; stroke-dasharray: 9 7; fill: none; }
+      .arrowLabel { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #374151; }
+      .noteBox { fill: #111827; stroke: #111827; stroke-width: 2; }
+      .noteText { font: 700 14px Apple SD Gothic Neo, Malgun Gothic, sans-serif; fill: #f9fafb; }
+    </style>
+  </defs>
+  <rect width="1180" height="520" fill="#fffaf0"/>
+  <text x="54" y="58" class="title">옵저버 패턴</text>
+  <text x="54" y="88" class="subtitle">Subject는 Observer 목록을 가지고 notify()로 갱신을 알린다</text>
+  <line x1="310" y1="190" x2="500" y2="119" class="arrow" marker-end="url(#arrow)"/>
+<text x="405" y="144" text-anchor="middle" class="arrowLabel">notify(update)</text>
+<line x1="310" y1="230" x2="500" y2="259" class="arrow" marker-end="url(#arrow)"/>
+<text x="405" y="234" text-anchor="middle" class="arrowLabel">notify(update)</text>
+<line x1="720" y1="119" x2="815" y2="189" class="arrow" marker-end="url(#arrow)"/>
+<line x1="720" y1="259" x2="815" y2="219" class="arrow" marker-end="url(#arrow)"/>
+  <rect x="80" y="170" width="230" height="78" rx="8" class="abstract"/>
+<text x="195" y="203" text-anchor="middle" class="boxText">Subject</text>
+<text x="195" y="223" text-anchor="middle" class="boxText">subscribe()</text>
+<text x="195" y="243" text-anchor="middle" class="boxText">notify()</text>
+<rect x="500" y="80" width="220" height="78" rx="8" class="product"/>
+<text x="610" y="113" text-anchor="middle" class="boxText">Observer A</text>
+<text x="610" y="133" text-anchor="middle" class="boxText">EmailSubscriber</text>
+<rect x="500" y="220" width="220" height="78" rx="8" class="product"/>
+<text x="610" y="253" text-anchor="middle" class="boxText">Observer B</text>
+<text x="610" y="273" text-anchor="middle" class="boxText">PushSubscriber</text>
+<rect x="815" y="150" width="240" height="78" rx="8" class="concrete"/>
+<text x="935" y="183" text-anchor="middle" class="boxText">상태 변경</text>
+<text x="935" y="203" text-anchor="middle" class="boxText">모든 구독자 갱신</text>
+  <rect x="80" y="405" width="500" height="54" rx="6" class="noteBox"/>
+<text x="98" y="429" text-anchor="start" class="noteText">포인트: Observer는 “상속된 객체”가 아니라</text>
+<text x="98" y="449" text-anchor="start" class="noteText">Subject에 등록된 객체 목록이다.</text>
+</svg>
