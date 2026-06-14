@@ -21,9 +21,9 @@ sidebar_position: 2
 
 | 관계 | 표기 | 방향 |
 | --- | --- | --- |
-| 상속, 일반화 | 실선 + 빈 삼각형 | 하위 클래스에서 상위 클래스 쪽으로 향한다. 삼각형은 부모 쪽에 붙는다. |
-| 구현, 실체화, `implements` | 점선 + 빈 삼각형 | 구현 클래스에서 인터페이스 쪽으로 향한다. 삼각형은 인터페이스 쪽에 붙는다. |
-| 호출, 생성, 위임, 참조 | 일반 화살표 | 실제 호출하거나 알고 있는 대상 쪽으로 향한다. |
+| 상속, 일반화 | ![상속 일반화 화살표](/img/image-repository/gof-patterns/legend-inheritance.svg)<br />실선 + 빈 삼각형 | 하위 클래스에서 상위 클래스 쪽으로 향한다. 삼각형은 부모 쪽에 붙는다. |
+| 구현, 실체화, `implements` | ![구현 실체화 화살표](/img/image-repository/gof-patterns/legend-realization.svg)<br />점선 + 빈 삼각형 | 구현 클래스에서 인터페이스 쪽으로 향한다. 삼각형은 인터페이스 쪽에 붙는다. |
+| 호출, 생성, 위임, 참조 | ![일반 호출 참조 화살표](/img/image-repository/gof-patterns/legend-call.svg)<br />일반 화살표 | 실제 호출하거나 알고 있는 대상 쪽으로 향한다. |
 
 
 ## 생성 패턴
