@@ -57,4 +57,5 @@ slug: /intro
 - [요구사항 분석 용어 디버깅](/docs/software-design/requirements-analysis)
 - [사용자 인터페이스 용어 디버깅](/docs/software-design/user-interface)
 - [정규화와 함수 종속](/docs/database/normalization)
+- [분산 데이터베이스의 투명성](/docs/database/distributed-database-transparency)
 - [UML 다이어그램 예제 모음](/docs/image-repository/uml-diagram-examples)
